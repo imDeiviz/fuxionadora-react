@@ -1,0 +1,94 @@
+:root {
+  --primary: #d400ff;
+  --primary-hover: #b000d4;
+}
+
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app.dark {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.dark .card {
+  background-color: #2d2d2d;
+  border-color: #404040;
+}
+
+.dark .form-control,
+.dark .form-select {
+  background-color: #333;
+  border-color: #404040;
+  color: #fff;
+}
+
+.dark .form-control:focus,
+.dark .form-select:focus {
+  background-color: #404040;
+  color: #fff;
+}
+
+.dark .input-group-text {
+  background-color: #404040;
+  border-color: #505050;
+  color: #fff;
+}
+
+.result-card {
+  transition: all 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(212, 0, 255, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #eee;
+  }
+  100% {
+    background-color: #ddd;
+  }
+}
+
+.dark .skeleton {
+  animation: skeleton-loading-dark 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading-dark {
+  0% {
+    background-color: #333;
+  }
+  100% {
+    background-color: #444;
+  }
+}
