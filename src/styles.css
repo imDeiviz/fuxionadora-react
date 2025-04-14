@@ -1,3 +1,7 @@
+.brand-purple {
+  color: #d400ff !important;
+}
+
 :root {
   --primary: #d400ff;
   --primary-hover: #b000d4;
