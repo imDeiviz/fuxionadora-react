@@ -22,6 +22,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Naturgy',
+      nombreTarifa: 'Tarifa Por Uso Luz',
       tipoEnergia: 'luz',
       costoEnergia,
       costoPotencia,
@@ -51,6 +52,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Repsol',
+      nombreTarifa: 'Tarifa Repsol Luz',
       tipoEnergia: 'luz',
       costoEnergia,
       costoPotencia,
@@ -89,6 +91,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Endesa',
+      nombreTarifa: 'Endesa Libre Luz',
       tipoEnergia: 'luz',
       costoEnergia,
       costoPotencia,
@@ -116,6 +119,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Naturgy',
+      nombreTarifa: 'Tarifa Por Uso Gas',
       tipoEnergia: 'gas',
       terminoFijo,
       terminoVariable,
@@ -144,6 +148,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Repsol',
+      nombreTarifa: 'Tarifa Repsol Gas',
       tipoEnergia: 'gas',
       terminoFijo,
       terminoVariable,
@@ -186,6 +191,7 @@ export const useEnergyCalculator = () => {
     
     return {
       compania: 'Endesa',
+      nombreTarifa: 'Endesa Libre Gas',
       tipoEnergia: 'gas',
       terminoFijo,
       terminoVariable,

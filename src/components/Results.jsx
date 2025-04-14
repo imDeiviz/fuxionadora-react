@@ -49,7 +49,10 @@ const Results = ({ results, loading }) => {
           <tbody>
             {sortedResults.map((result) => (
               <tr key={result.compania} className={result === mejorTarifa ? 'table-success' : ''}>
-                <td>{result.compania}</td>
+                <td>
+                  <div>{result.compania}</div>
+                  {result.nombreTarifa && <small className="text-muted">{result.nombreTarifa}</small>}
+                </td>
                 <td>{result.costoEnergia.toFixed(2)} €</td>
                 <td>{result.costoPotencia.toFixed(2)} €</td>
                 <td>{result.costoMantenimiento.toFixed(2)} €</td>
@@ -69,7 +72,7 @@ const Results = ({ results, loading }) => {
         </Table>
 
         <div className="alert alert-info">
-          <h5>Desglose de la mejor tarifa ({mejorTarifa.compania})</h5>
+          <h5>Desglose de la mejor tarifa ({mejorTarifa.compania}) {mejorTarifa.nombreTarifa && `- ${mejorTarifa.nombreTarifa}`}</h5>
           <p className="mb-1">Coste energía: {mejorTarifa.costoEnergia.toFixed(2)} €</p>
           <p className="mb-1">Término de potencia: {mejorTarifa.costoPotencia.toFixed(2)} €</p>
           {mejorTarifa.costoMantenimiento > 0 && (
