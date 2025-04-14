@@ -19,7 +19,7 @@ const EnergyForm = ({ onCalculate }) => {
       mantenimiento: formData.get('mantenimiento') === 'on'
     };
 
-      if (energyType === 'luz') {
+    if (energyType === 'luz') {
       data.consumo = Number(formData.get('consumo'));
       data.potenciaP1 = Number(formData.get('potenciaP1'));
       data.potenciaP2 = Number(formData.get('potenciaP2'));
@@ -33,6 +33,7 @@ const EnergyForm = ({ onCalculate }) => {
     }
 
     onCalculate(data);
+    // No reset of state or form, so the data will persist after submit
   };
 
   return (
